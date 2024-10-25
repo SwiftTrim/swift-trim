@@ -5,6 +5,7 @@ export default function Reviews() {
     <>
       <Header />
       <h2>Reviews Page</h2>
+      <h2>Coming Soon</h2>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import EmailForm from "../components/EmailForm";
 import Header from "../components/Header";
 
 export default function Quote() {
@@ -5,6 +6,7 @@ export default function Quote() {
     <>
       <Header />
       <h2>Quote Page</h2>
+      <EmailForm />
     </>
   );
 }

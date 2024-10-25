@@ -1,3 +1,4 @@
+import EmailForm from "../components/EmailForm";
 import Header from "../components/Header";
 
 export default function Contact() {
@@ -5,6 +6,7 @@ export default function Contact() {
     <>
       <Header />
       <h2>Contact Page</h2>
+      <EmailForm />
     </>
   );
 }
