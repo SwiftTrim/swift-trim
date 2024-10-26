@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import NoPage from "./pages/NoPage";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/quote" element={<Quote />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

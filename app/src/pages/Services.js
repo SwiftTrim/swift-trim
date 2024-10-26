@@ -1,10 +1,68 @@
-import Header from "../components/Header";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import ServiceCard from "../components/ServiceCard";
 
-export default function Services() {
+const Services = () => {
+  const [cardset1, setCards1] = useState([]);
+  const [cardset2, setCards2] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the local JSON file
+    fetch("../BasicServices.json")
+      .then((response) => response.json())
+      .then((data) => setCards1(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+  useEffect(() => {
+    // Fetch data from the local JSON file
+    fetch("../OtherServices.json")
+      .then((response) => response.json())
+      .then((data) => setCards2(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   return (
     <>
-      <Header />
-      <h2>Services Page</h2>
+      <h2>Services</h2>
+      <div>
+        <ul>
+          <li>
+            <i className="fa fa-phone"> (770) 676-2846</i> {/* Phone Icon */}
+          </li>
+          <li>
+            <i className="fa fa-envelope"> info@swifttrimga.com</i>
+            {/* Envelope Icon */}
+          </li>
+        </ul>
+      </div>
+      <div className="card-container">
+        <h2>Regular Weekly or Bi-weekly Bundled Services</h2>
+        {cardset1.map((card) => (
+          <ServiceCard
+            title={card.title}
+            description={card.description}
+            image={card.image}
+          />
+        ))}
+        <Link to="/quote">
+          <button>Request Quote</button>
+        </Link>
+        <h2>Additonal Services At Your Request</h2>
+
+        {cardset2.map((card) => (
+          <ServiceCard
+            title={card.title}
+            description={card.description}
+            image={card.image}
+          />
+        ))}
+        <Link to="/quote">
+          <button>Request Quote</button>
+        </Link>
+      </div>
     </>
   );
-}
+};
+
+export default Services;

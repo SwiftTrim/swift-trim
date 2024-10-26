@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "title": "Mowing",
+        "description": "Mowing of the specified lawn areas",
+        "image": "./Mowing.png"
+    },
+    {
+        "id": 2,
+        "title": "Trimming",
+        "description": "Trimming around the perimeter of lawn",
+        "image": "./Trimming.png"
+    },
+    {
+        "id": 3,
+        "title": "Edging",
+        "description": "Edging around all edges of concrete",
+        "image": "./Edging.png"
+    },
+    {
+        "id": 4,
+        "title": "Blowing",
+        "description": "Removal of all grass clippings and debris from concrete areas",
+        "image": "./Blowing.png"
+    },
+    {
+        "id": 5,
+        "title": "Leaf Removal",
+        "description": "Removal of any leaves or debris from lawn or concrete areas",
+        "image": "./LeafRemoval.png"
+    }
+
+]

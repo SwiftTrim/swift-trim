@@ -35,7 +35,6 @@ const EmailForm = () => {
 
   return (
     <div>
-      <h1>Contact Us</h1>
       <form onSubmit={sendEmail}>
         <input
           type="text"
