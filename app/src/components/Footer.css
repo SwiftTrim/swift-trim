@@ -1,0 +1,13 @@
+.footer-links i {
+    font-size: 24px; /* Adjust size */
+    color: #4e712e; /* Icon color */
+    margin-left: 10px; /* Spacing */
+}
+
+.facebook a:hover i {
+    color: #4f81eb; /* Facebook blue on hover */
+}
+
+.instagram a:hover i {
+    color: #ef2dd2; /* Facebook blue on hover */
+}

@@ -1,0 +1,118 @@
+.navbar {
+    background-color: #333;
+    padding: 15px;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-items {
+    top: 200px;
+    left: 50px;
+    right: 50px;
+}
+
+.logo-container {
+    display: inline-block; /* Ensures the container wraps the logo */
+    border: 2px solid transparent; /* Initial border is transparent */
+    border-radius: 50px;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;; /* Smooth transition for border color and scaling */
+    padding: 5px; /* Optional padding to create space between the logo and border */
+    border-radius: 20px;
+}
+
+.logo-container:hover {
+    border-color: #c8e456; /* Change this to your desired highlight color */
+    transform: scale(1.05); /* Optional: slightly enlarge the logo on hover */
+    border-radius: 30px;
+    box-shadow: 0 0 15px #c8e456; /* Glow effect */
+
+}
+.logo-image {
+    width: 200px; /* Fixed width to control size */
+    max-width: 100%; /* Ensures the logo doesn't exceed the container width */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.3s; /* Smooth scaling transition */
+    border-radius: 20px;
+}
+
+.menu-items {
+    display: flex;
+}
+
+.menu-items a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.menu-items a:hover {
+    color: #c8e456;
+
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .logo-container{
+        display: none;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    .menu-items {
+        display: none; /* Hide menu items by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Position dropdown below navbar */
+        top: 60px; /* Below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: #333; /* Same as navbar */
+    }
+
+    .menu-items.open {
+        display: flex; /* Show menu items when toggled */
+    }
+
+    .menu-items a {
+        padding: 10px 0; /* Spacing for mobile */
+        text-align: center;
+        border-bottom: 1px solid #444; /* Optional separator */
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .menu-items {
+        display: flex; /* Show menu items by default */
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger icon */
+    }
+
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .menu-items {
+        display: flex; /* Show menu items by default */
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger icon */
+    }
+
+}
