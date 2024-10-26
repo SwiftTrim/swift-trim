@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "title": "Gutter Cleaning",
+        "description": "Removal of leaves and debris from gutters",
+        "image": "./GutterCleaning.png"
+    },
+    {
+        "id": 2,
+        "title": "Pressure Washing",
+        "description": "Pressure washing the specified exterior areas of the structure",
+        "image": "./PressureWashing.png"
+    }
+
+]
