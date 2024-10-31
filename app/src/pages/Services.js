@@ -25,17 +25,6 @@ const Services = () => {
   return (
     <>
       <h2>Services</h2>
-      <div>
-        <ul>
-          <li>
-            <i className="fa fa-phone"> (770) 676-2846</i> {/* Phone Icon */}
-          </li>
-          <li>
-            <i className="fa fa-envelope"> info@swifttrimga.com</i>
-            {/* Envelope Icon */}
-          </li>
-        </ul>
-      </div>
       <div className="card-container">
         <h2>Regular Weekly or Bi-weekly Bundled Services</h2>
         {cardset1.map((card) => (
