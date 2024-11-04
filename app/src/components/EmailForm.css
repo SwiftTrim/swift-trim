@@ -1,0 +1,78 @@
+
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgb(96, 97, 96);
+    background-color:  #294a1e;
+  }
+  
+  
+   h2{
+    font-family: 'Pacifico', cursive;
+    color: #212529;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Uniform Input Fields */
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="phone"],
+  form input[name="address"],
+  form input[name="citystatezip"],
+  form textarea[name="message"] {
+    width: 95%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: none;
+    background-color: #f2f6f8;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.688);
+    font-family: 'Quicksand', sans-serif;
+    color: #294a1e ;
+    font-size: 1.1rem;
+    outline: none;
+  }
+  
+  /* Placeholder Styling */
+  input::placeholder,
+  textarea::placeholder {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #838788;
+  }
+  
+  /* Textarea Specific Styling */
+  textarea[name="message"] {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 20px;
+    border: none;
+    border-radius: 25px;
+    background-image: linear-gradient(131deg, #c8e456, #4e712e);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button[type="submit"]:hover {
+    background-image: linear-gradient(131deg, #4e712e, #c8e456);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  
+  
