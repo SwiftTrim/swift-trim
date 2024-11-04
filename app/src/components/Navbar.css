@@ -1,7 +1,9 @@
 .navbar {
     background-color: #2b382b;
     padding: 15px;
-
+    position: sticky;
+    top: 0; /* This makes it stick to the top when scrolling */
+    z-index: 1000; /* Ensures it's above other content */
 }
 
 .navbar nav {
@@ -12,6 +14,7 @@
 }
 
 .menu-items {
+    display: flex;
     top: 200px;
     left: 50px;
     right: 50px;
@@ -33,22 +36,18 @@
     width: 300px; /* Fixed width to control size */
     max-width: 100%; /* Ensures the logo doesn't exceed the container width */
     height: auto; /* Maintains aspect ratio */
-    transition: transform 0.3s; /* Smooth scaling transition */
     border-radius: 20px;
     background-color: #FFFFF0;
-    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;; /* Smooth transition for border color and scaling */
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition for border color and scaling */
     border: 2px solid #c8e456; /* Initial border is transparent */
-    display: inline-block; /* Ensures the container wraps the logo */
-}
-
-.menu-items {
-    display: flex;
 }
 
 .menu-items a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .menu-items a:hover {
@@ -72,13 +71,8 @@
 @media (max-width: 905px) {
 
     .navbar nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         height: 25px;
     }
-
-    .navbar nav 
 
     .logo-container{
         display: none;
@@ -96,7 +90,6 @@
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
-        transition: all 0.3s ease;
     }
 
     .hamburger span {
@@ -123,8 +116,9 @@
         display: none; /* Hide menu items by default */
         flex-direction: column; /* Stack items vertically */
         position: absolute; /* Position dropdown below navbar */
-        top: 100px; /* Below the navbar */
+        top: 45px; /* Below the navbar */
         left: 0;
+        right: 0;
         width: 100%;
         background-color: #2b382b; /* Same as navbar */
     }
@@ -147,14 +141,14 @@
     }
 }
 
-@media (max-width: 328px) {
+@media (max-width: 397px) {
     .menu-items.open {
-        top: 45px;
+        top:45px;
     }
 }
 
 /* Desktop Styles */
-@media (min-width: 905px) {
+@media (min-width: 906px) {
     .menu-items {
         display: flex; /* Show menu items by default */
     }

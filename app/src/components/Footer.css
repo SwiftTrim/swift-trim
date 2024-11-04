@@ -1,7 +1,12 @@
+.footer {
+    padding: 0px;
+    max-width: 100%;
+}
+
 .footer-links i {
     font-size: 24px; /* Adjust size */
-    color: #4e712e; /* Icon color */
-    margin-left: 10px; /* Spacing */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .facebook a:hover i {
@@ -9,5 +14,35 @@
 }
 
 .instagram a:hover i {
-    color: #ef2dd2; /* Facebook blue on hover */
+    color: #ef2dd2; /* instagram pink on hover */
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.footer-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer-content {
+    padding-top: 30px;
+}
+
+.privacy {
+    padding-right: 7px;
+    text-decoration: none;
+    color: black;
+}
+
+.privacy:hover {
+    color: #c8e456
 }
