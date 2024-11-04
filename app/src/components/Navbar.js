@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../assets/logo.png";
+import ST from "../assets/ST.png";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -13,14 +14,28 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <nav>
+        <Link className="mobile-logo" to="/">
+          <div className="mobile-logo-container">
+            <img src={ST} alt="ST Mobile Logo" className="mobile-logo-image" />
+          </div>{" "}
+        </Link>
         <Link className="logo" to="/">
           <div className="logo-container">
             <img src={logo} alt="SwiftTrim Logo" className="logo-image" />
           </div>{" "}
         </Link>
-        <div className="hamburger" onClick={toggleMenu}>
-          &#9776; {/* Hamburger icon */}
+
+        {/* Hamburger Icon */}
+        <div
+          className={`hamburger ${isMenuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+
+        {/* Menu Items */}
         <div className={`menu-items ${isMenuOpen ? "open" : ""}`}>
           <NavLink exact to="/" onClick={toggleMenu}>
             <a>Home</a>
