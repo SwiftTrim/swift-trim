@@ -47,6 +47,28 @@
     height: 25px;
 }
 
+.facebook {
+    color: black;
+}
+
+.fa {
+    color: black;
+}
+
+.instagram {
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.facebook a:hover i {
+    color: #4f81eb; /* Facebook blue on hover */
+}
+
+.instagram a:hover i {
+    color: #ef2dd2; /* Facebook blue on hover */
+}
+
 @media (max-width: 905px) {
     .header ul {
         display: flex;
@@ -61,7 +83,7 @@
       }
 }
 
-@media (max-width: 328px) {
+@media (max-width: 397px) {
     .header {
         display: none;
     }

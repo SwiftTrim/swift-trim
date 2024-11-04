@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./Footer.css";
 
 const Footer = () => {
@@ -25,7 +27,15 @@ const Footer = () => {
             </a>{" "}
           </li>
         </ul>
-        <p>&copy; {new Date().getFullYear()} SwiftTrim. All rights reserved.</p>
+        <div className="footer-text">
+          <Link className="privacy" to="/privacy">
+            Privacy Policy
+          </Link>
+          <p className="copyright">
+            | &copy; {new Date().getFullYear()} SwiftTrim LLC. All rights
+            reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );

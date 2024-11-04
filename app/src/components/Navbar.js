@@ -11,18 +11,35 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLogoClick = () => {
+    // Close the menu if it's open
+    if (isMenuOpen) {
+      toggleMenu();
+    }
+    // Navigate to the homepage
+    window.location.href = "/";
+  };
+
+  const menuItems = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Reviews", path: "/reviews" },
+    { name: "Contact", path: "/contact" },
+    { name: "Quote", path: "/quote" },
+  ];
+
   return (
-    <div className="navbar">
+    <div className={`navbar ${isMenuOpen ? "open" : ""}`}>
       <nav>
-        <Link className="mobile-logo" to="/">
+        <Link className="mobile-logo" to="/" onClick={handleLogoClick}>
           <div className="mobile-logo-container">
             <img src={ST} alt="ST Mobile Logo" className="mobile-logo-image" />
-          </div>{" "}
+          </div>
         </Link>
-        <Link className="logo" to="/">
+        <Link className="logo" to="/" onClick={handleLogoClick}>
           <div className="logo-container">
             <img src={logo} alt="SwiftTrim Logo" className="logo-image" />
-          </div>{" "}
+          </div>
         </Link>
 
         {/* Hamburger Icon */}
@@ -37,21 +54,11 @@ const Navbar = () => {
 
         {/* Menu Items */}
         <div className={`menu-items ${isMenuOpen ? "open" : ""}`}>
-          <NavLink exact to="/" onClick={toggleMenu}>
-            <a>Home</a>
-          </NavLink>
-          <NavLink to="/services" onClick={toggleMenu}>
-            <a>Services</a>
-          </NavLink>
-          <NavLink to="/reviews" onClick={toggleMenu}>
-            <a>Reviews</a>
-          </NavLink>
-          <NavLink to="/contact" onClick={toggleMenu}>
-            <a>Contact</a>
-          </NavLink>
-          <NavLink to="/quote" onClick={toggleMenu}>
-            <a>Quote</a>
-          </NavLink>
+          {menuItems.map((item, index) => (
+            <NavLink key={index} to={item.path} onClick={toggleMenu}>
+              {item.name}
+            </NavLink>
+          ))}
         </div>
       </nav>
     </div>

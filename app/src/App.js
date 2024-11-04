@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import NoPage from "./pages/NoPage";
+import Privacy from "./pages/Privacy";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/quote" element={<Quote />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
         <Footer />

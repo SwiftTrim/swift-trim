@@ -14,6 +14,24 @@ const Header = () => {
           {/* Envelope Icon */}
           <p>info@swifttrimga.com</p>
         </li>
+        <li className="facebook">
+          <a
+            href="https://www.facebook.com/people/SwiftTrim/61567684291532"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa fa-facebook"></i> {/* Facebook Icon */}
+          </a>{" "}
+        </li>
+        <li className="instagram">
+          <a
+            href="https://www.instagram.com/swifttrimga/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa fa-instagram"></i> {/* Instagram Icon */}
+          </a>{" "}
+        </li>
       </ul>
     </div>
   );
